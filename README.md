@@ -1,30 +1,28 @@
 # Retail Sales Prediction using Machine Learning
 
-A machine-learning internship project built with Python and scikit-learn to explore retail transaction data and estimate the `Total_Sales` value from transaction features.
-
-> **Project context:** Created as part of a 15-day internship with Skills4India / YBI Foundation.
+A Python machine-learning project that explores retail transaction data and estimates the `Total_Sales` value from transaction features using Linear Regression.
 
 ## Overview
 
-This repository contains a Jupyter notebook that walks through loading a retail dataset, inspecting and visualizing the data, preparing features, training a Linear Regression model, and evaluating predictions.
+This project demonstrates an end-to-end regression workflow in a Jupyter notebook: loading and inspecting data, exploratory data analysis, feature preparation, model training, evaluation, and sample prediction.
 
 ### Visual Results
 
-The notebook includes the project's actual generated visualizations and workflow:
+The notebook includes generated visualizations and the modeling workflow:
 
 - **Sales distribution:** histogram showing the distribution of `Total_Sales`.
 - **Actual vs. predicted sales:** scatter plot comparing held-out test values with model predictions.
-- **Notebook workflow:** data inspection, preprocessing, model training, and evaluation.
+- **Notebook workflow:** data inspection, preprocessing, training, and evaluation.
 
-[**Open the notebook and view the plots on GitHub**](https://github.com/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction_YBI_Internship.ipynb) · [**Run it in Google Colab**](https://colab.research.google.com/github/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction_YBI_Internship.ipynb)
+[**Open the notebook on GitHub**](https://github.com/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction.ipynb) · [**Run it in Google Colab**](https://colab.research.google.com/github/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction.ipynb)
 
-### What the notebook covers
+## Features
 
 - Loads the retail dataset published by YBI Foundation
-- Inspects the dataset structure, summary statistics, and missing values
-- Performs exploratory data analysis (sales distribution, numeric correlation heatmap, and pairplot)
+- Inspects dataset structure, summary statistics, and missing values
+- Performs exploratory data analysis using sales distribution plots, a numeric correlation heatmap, and a pairplot
 - Encodes categorical product and category features
-- Splits the data into training and test sets
+- Splits data into training and test sets
 - Scales features using `StandardScaler`
 - Trains a Linear Regression model
 - Evaluates predictions using MSE, RMSE, and R²
@@ -35,24 +33,24 @@ The notebook includes the project's actual generated visualizations and workflow
 
 - **Language:** Python
 - **Notebook:** Jupyter Notebook / Google Colab
-- **Data:** Pandas, NumPy
+- **Data processing:** Pandas, NumPy
 - **Visualization:** Matplotlib, Seaborn
-- **Machine learning:** scikit-learn (Linear Regression, train/test split, feature scaling, metrics)
+- **Machine learning:** scikit-learn
 - **Model serialization:** Joblib
 
 ## Dataset
 
-The notebook loads the CSV from the YBI Foundation repository:
+The notebook loads the CSV dataset from the YBI Foundation repository:
 
 [`RetailSales.csv`](https://raw.githubusercontent.com/YBIFoundation/Internship/main/RetailSales.csv)
 
-An internet connection is required when running the notebook's dataset-loading cell. The notebook's inspected copy contains 1,000 rows and 8 columns.
+An internet connection is required when running the dataset-loading cell. The notebook's inspected copy contains 1,000 rows and 8 columns.
 
 ## Run the Project
 
 ### Option 1: Google Colab
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction_YBI_Internship.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction.ipynb)
 
 1. Open the notebook using the badge above.
 2. Run the cells from top to bottom.
@@ -67,7 +65,7 @@ An internet connection is required when running the notebook's dataset-loading c
    cd RetailSalesPrediction-ML-Project
    ```
 
-2. (Recommended) Create and activate a virtual environment:
+2. Create and activate a virtual environment (recommended).
 
    **Windows**
    ```powershell
@@ -87,7 +85,7 @@ An internet connection is required when running the notebook's dataset-loading c
    pip install -r requirements.txt
    ```
 
-4. Launch Jupyter and open `Retail_Sales_Prediction_YBI_Internship.ipynb`:
+4. Launch Jupyter and open `Retail_Sales_Prediction.ipynb`:
 
    ```bash
    jupyter notebook
@@ -95,25 +93,25 @@ An internet connection is required when running the notebook's dataset-loading c
 
 ## Model Evaluation
 
-The notebook's saved run reports the following results on its 20% test split:
+The notebook's recorded run reports the following results on its 20% test split:
 
-| Metric | Reported result |
+| Metric | Recorded result |
 |---|---:|
 | R² score | 0.8691 |
 | Root Mean Squared Error (RMSE) | 873.87 |
 | Mean Squared Error (MSE) | 763,650.71 |
 
-These are the notebook's recorded results, not a guarantee that every run or environment will produce identical values.
+These are recorded notebook results, not a guarantee that every run or environment will produce identical values.
 
-## Important Modeling Note
+## Modeling Limitation
 
-In the supplied dataset, `Total_Sales` is calculated from `Quantity × Price`. The notebook uses those transaction fields as predictors of `Total_Sales`, so this is a demonstration of a regression workflow rather than a reliable model for forecasting future retail demand. For a stronger forecasting project, define a future-period target (for example, daily or weekly sales) and use only information available before that period.
+In the supplied dataset, `Total_Sales` is calculated from `Quantity × Price`. The notebook uses transaction fields including quantity and price to predict `Total_Sales`. Therefore, this project demonstrates a regression workflow; it should not be presented as a validated future-sales forecasting system. A stronger forecasting project would define a future-period target (such as daily or weekly sales) and use only information available before that period.
 
 ## Repository Contents
 
-- `Retail_Sales_Prediction_YBI_Internship.ipynb` — analysis, visualizations, model training, evaluation, and sample prediction.
+- `Retail_Sales_Prediction.ipynb` — data analysis, visualizations, model training, evaluation, and sample prediction.
 - `requirements.txt` — Python dependencies.
-- `.gitignore` — local environment, cache, and generated model exclusions.
+- `.gitignore` — excludes local environments, caches, and generated model artifacts.
 
 ## Author
 
@@ -121,6 +119,6 @@ In the supplied dataset, `Total_Sales` is calculated from `Quantity × Price`. T
 
 - GitHub: [@shivarjunchaturvedi](https://github.com/shivarjunchaturvedi)
 
-## Responsible Use
+## Purpose
 
-This repository is intended for educational and portfolio demonstration purposes. Review the dataset source and modeling assumptions before using results for business decisions.
+This project is for learning and portfolio demonstration. Review the dataset source and modeling assumptions before using results for business decisions.
