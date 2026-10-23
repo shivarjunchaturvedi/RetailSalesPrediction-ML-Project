@@ -8,6 +8,16 @@ A machine-learning internship project built with Python and scikit-learn to expl
 
 This repository contains a Jupyter notebook that walks through loading a retail dataset, inspecting and visualizing the data, preparing features, training a Linear Regression model, and evaluating predictions.
 
+### Visual Results
+
+The notebook includes the project's actual generated visualizations and workflow:
+
+- **Sales distribution:** histogram showing the distribution of `Total_Sales`.
+- **Actual vs. predicted sales:** scatter plot comparing held-out test values with model predictions.
+- **Notebook workflow:** data inspection, preprocessing, model training, and evaluation.
+
+[**Open the notebook and view the plots on GitHub**](https://github.com/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction_YBI_Internship.ipynb) · [**Run it in Google Colab**](https://colab.research.google.com/github/shivarjunchaturvedi/RetailSalesPrediction-ML-Project/blob/main/Retail_Sales_Prediction_YBI_Internship.ipynb)
+
 ### What the notebook covers
 
 - Loads the retail dataset published by YBI Foundation
@@ -74,7 +84,7 @@ An internet connection is required when running the notebook's dataset-loading c
 3. Install dependencies:
 
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn joblib jupyter
+   pip install -r requirements.txt
    ```
 
 4. Launch Jupyter and open `Retail_Sales_Prediction_YBI_Internship.ipynb`:
@@ -102,6 +112,8 @@ In the supplied dataset, `Total_Sales` is calculated from `Quantity × Price`. T
 ## Repository Contents
 
 - `Retail_Sales_Prediction_YBI_Internship.ipynb` — analysis, visualizations, model training, evaluation, and sample prediction.
+- `requirements.txt` — Python dependencies.
+- `.gitignore` — local environment, cache, and generated model exclusions.
 
 ## Author
 
